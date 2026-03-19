@@ -1,0 +1,4 @@
+# Memory: features/crm-apoio-voto-v0
+Updated: now
+
+CRM Apoio/Voto v0: Camada de conversão para contatos CRM. Adiciona campo `support_level` (unknown|negative|neutral|leaning|yes|mobilizer) em `crm_contatos` com atualização em 1 toque no ContactDetailDrawer. Textos dinâmicos por modo (pré-campanha: "Apoio", campanha: "Voto") via `useAppMode()` + `getSupportLevelOptions()`. Scripts rápidos para pedir apoio/voto, indicação e convite para atividade. RPCs: `set_contact_support_level` (valida escopo, sanitiza reason 140 chars), `get_my_support_metrics`, `get_scope_support_metrics` (coord/admin com taxa de conversão). Tracking sem PII: `crm_support_set { level, mode }`, `crm_support_script_copied { type, mode }`. Métricas exibidas em `/coordenador/hoje` via SupportMetricsCard. Integração com Plano do Dia: sugere `ask_referral` para contatos confirmados e `qualify_contact` se muitos `unknown`. Filtro "Não qualificados" no CRM.

@@ -1,0 +1,4 @@
+# Memory: features/cycle-mission-curation-v1
+Updated: 2026-02-12
+
+Cycle Mission Curation: Admins can select up to 6 missions as "Ativas no Ciclo" via the CycleMissionPicker in AdminSemanaEditor (tab "Missões"). Data stored in `ciclo_missoes_ativas` table (ciclo_id, mission_id, ordem, added_by). Volunteer-facing /voluntario/missoes splits into two sections: (1) "No Ciclo — Semana Atual" showing curated missions prominently, (2) "Biblioteca" (collapsible, default closed) with search + type filters for all remaining missions. Falls back to flat list when no cycle or no curated missions exist. useTodayMission applies +10 score bonus to cycle-curated missions for /voluntario/hoje recommendations. Hook: useCycleMissions(cicloId). Component: CycleMissionPicker. Max 6 missions enforced at hook + UI level.
