@@ -35,7 +35,7 @@ export default function VoluntarioTerritorio() {
             </Button>
             <Logo size="sm" />
           </div>
-          <Button variant="ghost" size="icon" onClick={() => navigate("/voluntario")}>
+          <Button variant="ghost" size="icon" onClick={() => navigate("/voluntario/hoje")}>
             <Home className="h-5 w-5" />
           </Button>
         </div>

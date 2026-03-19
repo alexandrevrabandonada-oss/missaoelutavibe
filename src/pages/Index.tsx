@@ -62,7 +62,7 @@ const Index = () => {
     // Only approved users can proceed
     if (isApproved) {
       if (profile?.onboarding_status === "concluido") {
-        navigate("/voluntario");
+        navigate("/voluntario/hoje");
       } else {
         navigate("/onboarding");
       }
@@ -71,7 +71,7 @@ const Index = () => {
   }
 
   return (
-    <div className="min-h-screen flex flex-col items-center justify-center p-6 bg-background texture-concrete">
+    <div className="min-h-screen flex flex-col items-center justify-center p-6 bg-background texture-concrete" data-testid="page-index">
       <div className="text-center space-y-8 animate-slide-up max-w-md">
         <Logo size="lg" />
         

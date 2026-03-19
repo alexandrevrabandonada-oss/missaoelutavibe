@@ -184,7 +184,7 @@ export default function VoluntarioPrimeirosPassos() {
             </div>
           </div>
           <Button variant="ghost" size="sm" asChild>
-            <Link to="/voluntario">
+            <Link to="/voluntario/hoje">
               <Home className="h-4 w-4 mr-1" />
               Início
             </Link>
@@ -453,7 +453,7 @@ export default function VoluntarioPrimeirosPassos() {
                 <Button 
                   variant="ghost" 
                   size="sm"
-                  onClick={() => navigate("/voluntario")}
+                  onClick={() => navigate("/voluntario/hoje")}
                   className="w-full text-muted-foreground"
                 >
                   Pular por agora
@@ -480,7 +480,7 @@ export default function VoluntarioPrimeirosPassos() {
                     Você já pode acessar o Hub completo.
                   </p>
                 </div>
-                <Button onClick={() => navigate("/voluntario")}>
+                <Button onClick={() => navigate("/voluntario/hoje")}>
                   Ir para o Hub
                   <ArrowRight className="h-4 w-4 ml-2" />
                 </Button>

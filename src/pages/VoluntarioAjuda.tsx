@@ -50,7 +50,7 @@ export default function VoluntarioAjuda() {
       {/* Header */}
       <div className="flex items-center gap-4 mb-6">
         {canNavigateHome ? (
-          <Button variant="ghost" size="icon" onClick={() => navigate("/voluntario")}>
+          <Button variant="ghost" size="icon" onClick={() => navigate("/voluntario/hoje")}>
             <ArrowLeft className="h-5 w-5" />
           </Button>
         ) : (
@@ -62,7 +62,7 @@ export default function VoluntarioAjuda() {
             <Button 
               variant="ghost" 
               size="icon" 
-              onClick={() => navigate("/voluntario")}
+              onClick={() => navigate("/voluntario/hoje")}
             >
               <Home className="h-5 w-5" />
             </Button>
@@ -231,7 +231,7 @@ export default function VoluntarioAjuda() {
         {/* Back button - only for approved users */}
         {canNavigateHome && (
           <Button 
-            onClick={() => navigate("/voluntario")} 
+            onClick={() => navigate("/voluntario/hoje")} 
             className="w-full"
             variant="outline"
           >

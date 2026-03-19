@@ -144,7 +144,7 @@ export default function AdminModeracao() {
   }
 
   if (!isCoordinator()) {
-    navigate("/missao");
+    navigate("/voluntario/hoje");
     return null;
   }
 

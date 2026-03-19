@@ -38,7 +38,7 @@ export default function AdminAnuncios() {
   }
 
   if (!isCoordinator()) {
-    navigate("/voluntario");
+    navigate("/voluntario/hoje");
     return null;
   }
 

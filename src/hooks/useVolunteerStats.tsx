@@ -89,7 +89,7 @@ export function useVolunteerStats() {
       const sevenDaysAgo = new Date();
       sevenDaysAgo.setDate(sevenDaysAgo.getDate() - 7);
 
-      let query = supabase
+      const query = supabase
         .from("topicos")
         .select("*", { count: "exact", head: true })
         .eq("oculto", false)

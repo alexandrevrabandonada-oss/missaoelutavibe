@@ -69,11 +69,11 @@ export default function VoluntarioAgenda() {
     <div className="min-h-screen flex flex-col p-6 bg-background texture-concrete">
       {/* Header */}
       <div className="flex items-center justify-between mb-4">
-        <Button variant="ghost" size="icon" onClick={() => navigate("/voluntario")}>
+        <Button variant="ghost" size="icon" onClick={() => navigate("/voluntario/hoje")}>
           <ArrowLeft className="h-5 w-5" />
         </Button>
         <Logo size="sm" />
-        <Button variant="ghost" size="icon" onClick={() => navigate("/voluntario")}>
+        <Button variant="ghost" size="icon" onClick={() => navigate("/voluntario/hoje")}>
           <Home className="h-5 w-5" />
         </Button>
       </div>

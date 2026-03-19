@@ -154,7 +154,7 @@ export default function VoluntarioBase() {
       {/* Header */}
       <header className="sticky top-0 z-40 bg-background/95 backdrop-blur border-b">
         <div className="container flex items-center gap-3 py-3">
-          <Button variant="ghost" size="icon" onClick={() => navigate("/voluntario")}>
+          <Button variant="ghost" size="icon" onClick={() => navigate("/voluntario/hoje")}>
             <ArrowLeft className="h-5 w-5" />
           </Button>
           <div className="flex-1">

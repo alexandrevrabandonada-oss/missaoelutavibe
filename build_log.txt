@@ -1,0 +1,6 @@
+
+> vite_react_shadcn_ts@0.0.0 build
+> vite build
+
+'vite' não é reconhecido como um comando interno
+ou externo, um programa operável ou um arquivo em lotes.

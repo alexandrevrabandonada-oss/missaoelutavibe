@@ -40,7 +40,7 @@ export default function Auth() {
   const hasInviteRef = !!refCode || hasValidStoredInvite();
   
   const cidadeParam = searchParams.get("cidade");
-  const nextParam = searchParams.get("next") || storedInvite?.next || "/voluntario";
+  const nextParam = searchParams.get("next") || storedInvite?.next || "/voluntario/hoje";
   
   const { registerUsage } = useConvites();
   const [authView, setAuthView] = useState<AuthView>(modeParam === "signup" ? "signup" : "login");
@@ -456,7 +456,7 @@ export default function Auth() {
   }
 
   return (
-    <div className="min-h-screen flex flex-col items-center justify-center p-6 bg-background texture-concrete">
+    <div className="min-h-screen flex flex-col items-center justify-center p-6 bg-background texture-concrete" data-testid="page-auth">
       <div className="w-full max-w-sm space-y-8 animate-slide-up">
         <Logo size="lg" />
 

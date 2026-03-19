@@ -182,7 +182,7 @@ export default function Onboarding() {
       }
       
       toast.success("Perfil completo! Vamos para sua primeira missão.");
-      navigate("/voluntario");
+      navigate("/voluntario/hoje");
     } catch (error) {
       toast.error("Erro ao salvar. Tente novamente.");
     } finally {

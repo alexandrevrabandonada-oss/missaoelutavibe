@@ -117,7 +117,7 @@ export function useFabricaAdmin(scopeTipo?: string, scopeId?: string | null) {
   const templatesQuery = useQuery({
     queryKey: ["fabrica-templates-admin", effectiveScopeTipo, effectiveScopeId],
     queryFn: async () => {
-      let query = supabase
+      const query = supabase
         .from("fabrica_templates")
         .select("*")
         .order("created_at", { ascending: false });

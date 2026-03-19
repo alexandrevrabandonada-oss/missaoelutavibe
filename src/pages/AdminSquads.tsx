@@ -93,7 +93,7 @@ export default function AdminSquads() {
   const { metrics } = useSquadMetrics();
 
   if (!isCoordinator()) {
-    navigate("/voluntario");
+    navigate("/voluntario/hoje");
     return null;
   }
 

@@ -37,7 +37,7 @@ export default function AceitarConviteRef() {
   const { profile, isLoading: profileLoading } = useProfile();
   
   const refCode = searchParams.get("ref");
-  const nextParam = searchParams.get("next") || "/voluntario";
+  const nextParam = searchParams.get("next") || "/voluntario/hoje";
   
   const [validationState, setValidationState] = useState<ValidationState>("loading");
   const [isApplying, setIsApplying] = useState(false);

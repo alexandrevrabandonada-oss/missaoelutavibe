@@ -62,7 +62,7 @@ export default function Formacao() {
     <div className="min-h-screen bg-background texture-concrete p-4 pb-24 safe-top safe-bottom">
       {/* Header */}
       <header className="flex items-center gap-3 mb-6">
-        <Button variant="ghost" size="icon" onClick={() => navigate("/voluntario")}>
+        <Button variant="ghost" size="icon" onClick={() => navigate("/voluntario/hoje")}>
           <ArrowLeft className="h-5 w-5" />
         </Button>
         <div className="flex-1">

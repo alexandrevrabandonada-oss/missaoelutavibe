@@ -12,6 +12,7 @@ export const LEGACY_ROUTE_MAP: Record<string, string> = {
   // Voluntário routes
   "/voluntario-hoje": "/voluntario/hoje",
   "/voluntario-missoes": "/voluntario/missoes",
+  "/missao": "/voluntario/hoje",
   "/voluntario-acoes": "/voluntario/acoes",
   "/voluntario-aprender": "/voluntario/aprender",
   "/voluntario-agir": "/voluntario/agir",

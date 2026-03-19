@@ -110,7 +110,7 @@ export default function AdminVoluntarios() {
   }
 
   if (!isCoordinator()) {
-    navigate("/voluntario");
+    navigate("/voluntario/hoje");
     return null;
   }
 
@@ -209,7 +209,7 @@ export default function AdminVoluntarios() {
             <Button variant="ghost" size="icon" onClick={handleRefresh}>
               <RefreshCw className="h-5 w-5" />
             </Button>
-            <Button variant="ghost" size="icon" onClick={() => navigate("/voluntario")}>
+            <Button variant="ghost" size="icon" onClick={() => navigate("/voluntario/hoje")}>
               <Home className="h-5 w-5" />
             </Button>
             <Button variant="ghost" size="icon" onClick={handleSignOut}>

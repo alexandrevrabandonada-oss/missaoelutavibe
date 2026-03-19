@@ -54,7 +54,7 @@ export default function VoluntarioPlenaria() {
         <header className="sticky top-0 z-50 bg-background/95 backdrop-blur border-b border-border p-4">
           <div className="flex items-center justify-between">
             <div className="flex items-center gap-3">
-              <Button variant="ghost" size="icon" onClick={() => navigate("/voluntario")}>
+              <Button variant="ghost" size="icon" onClick={() => navigate("/voluntario/hoje")}>
                 <ArrowLeft className="h-5 w-5" />
               </Button>
               <div>

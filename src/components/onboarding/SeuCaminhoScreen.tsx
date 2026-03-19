@@ -189,7 +189,7 @@ export function SeuCaminhoScreen({ onComplete, onSkip }: SeuCaminhoScreenProps) 
             variant="ghost"
             onClick={() => {
               onSkip?.();
-              navigate("/voluntario");
+              navigate("/voluntario/hoje");
             }}
             className="text-muted-foreground"
           >

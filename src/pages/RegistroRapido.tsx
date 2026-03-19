@@ -132,7 +132,7 @@ export default function RegistroRapido() {
     return (
       <div className="min-h-screen flex flex-col items-center justify-center p-6 bg-background">
         <h1 className="text-xl font-bold mb-4">Missão não encontrada</h1>
-        <Button onClick={() => navigate("/voluntario")} variant="outline">Voltar</Button>
+        <Button onClick={() => navigate("/voluntario/hoje")} variant="outline">Voltar</Button>
       </div>
     );
   }

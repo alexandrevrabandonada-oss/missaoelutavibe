@@ -73,7 +73,7 @@ export default function AdminPlaybook() {
   }
 
   if (!isCoordinator()) {
-    navigate("/missao");
+    navigate("/voluntario/hoje");
     return null;
   }
 

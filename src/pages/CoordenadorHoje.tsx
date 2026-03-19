@@ -187,7 +187,7 @@ export default function CoordenadorHoje() {
         <div className="max-w-4xl mx-auto p-4">
           <p className="text-muted-foreground">Acesso restrito a coordenadores.</p>
           <Button asChild className="mt-4">
-            <Link to="/voluntario">Voltar</Link>
+            <Link to="/voluntario/hoje">Voltar</Link>
           </Button>
         </div>
       </AppShell>

@@ -37,7 +37,7 @@ export default function AceitarConvite() {
       setStatus("success");
       // Redirect after 2 seconds
       setTimeout(() => {
-        navigate("/voluntario");
+        navigate("/voluntario/hoje");
       }, 2000);
     } catch (error: any) {
       setStatus("error");
@@ -139,7 +139,7 @@ export default function AceitarConvite() {
               <Button 
                 className="w-full" 
                 variant="ghost"
-                onClick={() => navigate("/voluntario")}
+                onClick={() => navigate("/voluntario/hoje")}
               >
                 Voltar ao Início
               </Button>

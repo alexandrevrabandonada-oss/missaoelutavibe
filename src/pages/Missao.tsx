@@ -17,7 +17,7 @@ export default function Missao() {
 
   // Redirect to voluntario area (this page is deprecated in favor of /voluntario)
   useEffect(() => {
-    navigate("/voluntario", { replace: true });
+    navigate("/voluntario/hoje", { replace: true });
   }, [navigate]);
 
   return <FullPageLoader text="Redirecionando..." />;

@@ -69,7 +69,7 @@ export default function AdminPlenaria() {
   }
 
   if (!isCoordinator()) {
-    navigate("/voluntario");
+    navigate("/voluntario/hoje");
     return null;
   }
 

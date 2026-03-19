@@ -309,15 +309,18 @@ export default function VoluntarioHoje() {
       component: <Bring1ProgressCard compact />,
     });
 
-    // 12. Quick Capture
+    // 12. Quick Capture - Hidden in V1 Canonical
+    /*
     modules.push({
       key: "quick_capture",
       visible: true,
       dismissible: true,
       component: <QuickCaptureCard />,
     });
+    */
 
-    // 13. Impact link (always lowest, but shown inline)
+    // 13. Impact link - Hidden in V1 Canonical
+    /*
     modules.push({
       key: "impact",
       visible: true,
@@ -331,6 +334,7 @@ export default function VoluntarioHoje() {
         </Link>
       ),
     });
+    */
 
     return modules;
   }, [
@@ -421,7 +425,7 @@ export default function VoluntarioHoje() {
               <div>
                 <h1 className="text-2xl font-bold flex items-center gap-2">
                   <CheckCircle2 className="h-6 w-6 text-green-500" />
-                  Check-in feito!
+                  <span data-testid="page-voluntario-hoje">Check-in feito!</span>
                 </h1>
                 <p className="text-muted-foreground">
                   {format(today, "EEEE, d 'de' MMMM", { locale: ptBR })}
@@ -584,12 +588,14 @@ export default function VoluntarioHoje() {
                   </Card>
                 )}
 
-                {/* Suggestions */}
+                {/* Suggestions - Hidden in V1 Canonical to reduce dispersion */}
+                {/*
                 <LocalSuggestions 
                   apiSuggestions={suggestions || undefined}
                   isLoading={loadingSuggestions}
                   compact 
                 />
+                */}
               </div>
             </details>
           </div>
@@ -616,7 +622,7 @@ export default function VoluntarioHoje() {
         {/* State A: No PilotTrackCard or WeekHeadline pre-checkin — the form IS the CTA */}
         
         {/* Header */}
-        <div id="checkin-form">
+        <div id="checkin-form" data-testid="page-voluntario-hoje">
           <h1 className="text-2xl font-bold">
             {isEditing ? "Editar Check-in" : "Check-in do Dia"}
           </h1>
@@ -669,46 +675,8 @@ export default function VoluntarioHoje() {
               </div>
             ) : (
               <div className="space-y-2">
-                {suggestions?.task && (
-                  <button
-                    onClick={() => handleSelectSuggestion("task", suggestions.task!.id)}
-                    className={`w-full flex items-center gap-3 p-3 rounded-lg border text-left transition-colors ${
-                      focoTipo === "task" && focoId === suggestions.task.id
-                        ? "border-primary bg-primary/5"
-                        : "hover:bg-accent"
-                    }`}
-                  >
-                    <Users className="h-5 w-5 text-blue-500" />
-                    <div className="flex-1 min-w-0">
-                      <p className="font-medium truncate">{suggestions.task.titulo}</p>
-                      <p className="text-sm text-muted-foreground">{suggestions.task.squad_nome}</p>
-                    </div>
-                    {focoTipo === "task" && focoId === suggestions.task.id && (
-                      <CheckCircle2 className="h-5 w-5 text-primary" />
-                    )}
-                  </button>
-                )}
-
-                {suggestions?.crm && (
-                  <button
-                    onClick={() => handleSelectSuggestion("crm", suggestions.crm!.id)}
-                    className={`w-full flex items-center gap-3 p-3 rounded-lg border text-left transition-colors ${
-                      focoTipo === "crm" && focoId === suggestions.crm.id
-                        ? "border-primary bg-primary/5"
-                        : "hover:bg-accent"
-                    }`}
-                  >
-                    <Phone className="h-5 w-5 text-green-500" />
-                    <div className="flex-1 min-w-0">
-                      <p className="font-medium truncate">Contatar: {suggestions.crm.nome}</p>
-                      <p className="text-sm text-muted-foreground">Follow-up pendente</p>
-                    </div>
-                    {focoTipo === "crm" && focoId === suggestions.crm.id && (
-                      <CheckCircle2 className="h-5 w-5 text-primary" />
-                    )}
-                  </button>
-                )}
-
+                {/* CRM, Agenda and Tasks (Squads) are hidden from pre-checkin suggestions in V1 Canonical */}
+                
                 {suggestions?.mission && (
                   <button
                     onClick={() => handleSelectSuggestion("mission", suggestions.mission!.id)}
@@ -724,29 +692,6 @@ export default function VoluntarioHoje() {
                       <p className="text-sm text-muted-foreground">Missão ativa</p>
                     </div>
                     {focoTipo === "mission" && focoId === suggestions.mission.id && (
-                      <CheckCircle2 className="h-5 w-5 text-primary" />
-                    )}
-                  </button>
-                )}
-
-                {suggestions?.agenda && (
-                  <button
-                    onClick={() => handleSelectSuggestion("agenda", suggestions.agenda!.id)}
-                    className={`w-full flex items-center gap-3 p-3 rounded-lg border text-left transition-colors ${
-                      focoTipo === "agenda" && focoId === suggestions.agenda.id
-                        ? "border-primary bg-primary/5"
-                        : "hover:bg-accent"
-                    }`}
-                  >
-                    <Calendar className="h-5 w-5 text-purple-500" />
-                    <div className="flex-1 min-w-0">
-                      <p className="font-medium truncate">{suggestions.agenda.titulo}</p>
-                      <p className="text-sm text-muted-foreground">
-                        {format(new Date(suggestions.agenda.inicio_em), "HH:mm")} -{" "}
-                        {suggestions.agenda.local_texto || "Local a definir"}
-                      </p>
-                    </div>
-                    {focoTipo === "agenda" && focoId === suggestions.agenda.id && (
                       <CheckCircle2 className="h-5 w-5 text-primary" />
                     )}
                   </button>

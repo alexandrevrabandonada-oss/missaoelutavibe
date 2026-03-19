@@ -50,7 +50,7 @@ export default function Redirect() {
   // Canonical destination: /aceitar-convite for all /r/:code links
   const aceitarConviteUrl = buildUrl("/aceitar-convite");
   const conviteUrl = buildUrl("/convite-mini");
-  const missoesUrl = "/missao";
+  const missoesUrl = "/voluntario/missoes";
 
   // Store origin data and log event once
   useEffect(() => {

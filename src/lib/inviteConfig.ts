@@ -52,7 +52,7 @@ export function hasValidStoredInvite(): boolean {
 export function getStoredInvite(): { ref: string; next: string } | null {
   const ref = localStorage.getItem("invite_ref");
   const ts = localStorage.getItem("invite_ref_ts");
-  const next = localStorage.getItem("invite_next") || "/voluntario";
+  const next = localStorage.getItem("invite_next") || "/voluntario/hoje";
   
   if (!ref || !ts) return null;
   
@@ -68,7 +68,7 @@ export function getStoredInvite(): { ref: string; next: string } | null {
 /**
  * Store invite data with timestamp
  */
-export function storeInvite(ref: string, next: string = "/voluntario") {
+export function storeInvite(ref: string, next: string = "/voluntario/hoje") {
   localStorage.setItem("invite_ref", ref);
   localStorage.setItem("invite_ref_ts", Date.now().toString());
   localStorage.setItem("invite_next", next);

@@ -196,7 +196,7 @@ export default function AguardandoAprovacao() {
   }
 
   return (
-    <div className="min-h-screen bg-background flex flex-col items-center justify-center p-4 sm:p-6">
+    <div className="min-h-screen bg-background flex flex-col items-center justify-center p-4 sm:p-6" data-testid="page-aguardando-aprovacao">
       <Logo size="lg" className="mb-6" />
 
       <Card className="max-w-md w-full border-border/60">

@@ -70,7 +70,7 @@ export default function VoluntarioAgendaDetalhe() {
             <ArrowLeft className="h-5 w-5" />
           </Button>
           <Logo size="sm" />
-          <Button variant="ghost" size="icon" onClick={() => navigate("/voluntario")}>
+          <Button variant="ghost" size="icon" onClick={() => navigate("/voluntario/hoje")}>
             <Home className="h-5 w-5" />
           </Button>
         </div>
@@ -99,7 +99,7 @@ export default function VoluntarioAgendaDetalhe() {
           <ArrowLeft className="h-5 w-5" />
         </Button>
         <Logo size="sm" />
-        <Button variant="ghost" size="icon" onClick={() => navigate("/voluntario")}>
+        <Button variant="ghost" size="icon" onClick={() => navigate("/voluntario/hoje")}>
           <Home className="h-5 w-5" />
         </Button>
       </div>

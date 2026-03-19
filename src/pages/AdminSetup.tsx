@@ -12,7 +12,7 @@ export default function AdminSetup() {
       <header className="sticky top-0 z-50 bg-background/95 backdrop-blur border-b border-border p-4">
         <div className="flex items-center justify-between">
           <Logo size="sm" />
-          <Button variant="ghost" size="icon" onClick={() => navigate("/missao")}>
+          <Button variant="ghost" size="icon" onClick={() => navigate("/voluntario/hoje")}>
             <Home className="h-5 w-5" />
           </Button>
         </div>

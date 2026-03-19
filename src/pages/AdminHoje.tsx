@@ -115,33 +115,14 @@ export default function AdminHoje() {
               </CardContent>
             </Card>
 
+            {/* CRM and Task metrics hidden in V1 Canonical */}
+            {/*
             <Card>
               <CardContent className="pt-6">
-                <div className="flex items-center gap-3">
-                  <div className="p-2 rounded-full bg-blue-500/10">
-                    <Users className="h-5 w-5 text-blue-500" />
-                  </div>
-                  <div>
-                    <p className="text-2xl font-bold">{metrics?.com_foco_task || 0}</p>
-                    <p className="text-sm text-muted-foreground">Foco: Tarefas</p>
-                  </div>
-                </div>
+                ...
               </CardContent>
             </Card>
-
-            <Card>
-              <CardContent className="pt-6">
-                <div className="flex items-center gap-3">
-                  <div className="p-2 rounded-full bg-green-500/10">
-                    <Phone className="h-5 w-5 text-green-500" />
-                  </div>
-                  <div>
-                    <p className="text-2xl font-bold">{metrics?.com_foco_crm || 0}</p>
-                    <p className="text-sm text-muted-foreground">Foco: CRM</p>
-                  </div>
-                </div>
-              </CardContent>
-            </Card>
+            */}
 
             <Card className={metrics?.travas_hoje ? "border-destructive" : ""}>
               <CardContent className="pt-6">
@@ -168,21 +149,10 @@ export default function AdminHoje() {
             <CardContent>
               <div className="flex gap-4 flex-wrap">
                 <div className="flex items-center gap-2">
-                  <div className="w-3 h-3 rounded-full bg-blue-500" />
-                  <span className="text-sm">Tarefas: {metrics.com_foco_task}</span>
-                </div>
-                <div className="flex items-center gap-2">
-                  <div className="w-3 h-3 rounded-full bg-green-500" />
-                  <span className="text-sm">CRM: {metrics.com_foco_crm}</span>
-                </div>
-                <div className="flex items-center gap-2">
                   <div className="w-3 h-3 rounded-full bg-orange-500" />
                   <span className="text-sm">Missões: {metrics.com_foco_mission}</span>
                 </div>
-                <div className="flex items-center gap-2">
-                  <div className="w-3 h-3 rounded-full bg-purple-500" />
-                  <span className="text-sm">Agenda: {metrics.com_foco_agenda}</span>
-                </div>
+                {/* Other focuses hidden in V1 Canonical */}
               </div>
             </CardContent>
           </Card>

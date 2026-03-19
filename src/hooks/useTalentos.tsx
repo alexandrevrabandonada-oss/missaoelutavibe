@@ -246,7 +246,7 @@ export function useChamadosAbertos(filters?: { skill?: string }) {
   const chamadosQuery = useQuery({
     queryKey: ["chamados-abertos", user?.id, filters],
     queryFn: async () => {
-      let query = supabase
+      const query = supabase
         .from("chamados_talentos")
         .select("*")
         .eq("status", "aberto")

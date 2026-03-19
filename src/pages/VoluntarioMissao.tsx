@@ -90,7 +90,7 @@ export default function VoluntarioMissao() {
       <div className="min-h-screen flex flex-col items-center justify-center p-6 bg-background texture-concrete">
         <AlertCircle className="h-12 w-12 text-destructive mb-4" />
         <h1 className="text-xl font-bold mb-2">Missão não encontrada</h1>
-        <Button onClick={() => navigate("/voluntario")} variant="outline">
+        <Button onClick={() => navigate("/voluntario/hoje")} variant="outline">
           Voltar
         </Button>
       </div>
@@ -139,7 +139,7 @@ export default function VoluntarioMissao() {
     <div className="min-h-screen flex flex-col p-6 bg-background texture-concrete">
       {/* Header */}
       <div className="flex items-center gap-4 mb-6">
-        <Button variant="ghost" size="icon" onClick={() => navigate("/voluntario")}>
+        <Button variant="ghost" size="icon" onClick={() => navigate("/voluntario/hoje")}>
           <ArrowLeft className="h-5 w-5" />
         </Button>
         <Logo size="sm" />
@@ -412,7 +412,7 @@ export default function VoluntarioMissao() {
 
         <Button 
           variant="outline" 
-          onClick={() => navigate("/voluntario")} 
+          onClick={() => navigate("/voluntario/hoje")} 
           className="w-full"
         >
           Voltar às Missões

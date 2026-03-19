@@ -150,7 +150,7 @@ export default function AdminTalentos() {
 
   // Auth check
   if (!isCoordinator()) {
-    navigate("/missao");
+    navigate("/voluntario/hoje");
     return null;
   }
 

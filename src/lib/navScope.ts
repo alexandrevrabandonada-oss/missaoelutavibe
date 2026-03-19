@@ -20,11 +20,18 @@ export const NAV_COMPACT_MODE = true;
 
 // Frozen routes - accessible by direct link but hidden from menus
 export const FROZEN_ROUTES = [
+  "/debates",
+  "/materiais",
+  "/formacao",
+  "/voluntario/aprender",
+  "/voluntario/agir",
   "/voluntario/skills",
   "/voluntario/talentos", 
   "/voluntario/squads",
   "/voluntario/top",
   "/voluntario/plenaria",
+  "/voluntario/base",
+  "/admin/fabrica",
   "/admin/squads",
   "/admin/talentos",
   "/admin/top",
@@ -51,6 +58,9 @@ export const VOLUNTARIO_NAV: NavItem[] = [
   { id: "squads", label: "Squads", path: "/voluntario/squads", icon: "Users", frozen: true },
   { id: "top", label: "Top", path: "/voluntario/top", icon: "Trophy", frozen: true },
   { id: "plenaria", label: "Plenária", path: "/voluntario/plenaria", icon: "MessageCircle", frozen: true },
+  { id: "base", label: "Base", path: "/voluntario/base", icon: "Database", frozen: true },
+  { id: "aprender", label: "Aprender", path: "/voluntario/aprender", icon: "BookOpen", frozen: true },
+  { id: "agir", label: "Agir", path: "/voluntario/agir", icon: "Zap", frozen: true },
 ];
 
 // Coordinator navigation items
@@ -65,7 +75,7 @@ export const ADMIN_NAV: NavItem[] = [
   { id: "home", label: "Admin", path: "/admin", icon: "Shield" },
   { id: "diagnostico", label: "Diagnóstico", path: "/admin/diagnostico", icon: "Activity" },
   { id: "papeis", label: "Papéis", path: "/admin/papeis", icon: "Users" },
-  { id: "fabrica", label: "Fábrica", path: "/admin/fabrica", icon: "Factory" },
+  { id: "fabrica", label: "Fábrica", path: "/admin/fabrica", icon: "Factory", frozen: true },
   { id: "lgpd", label: "LGPD", path: "/admin/lgpd", icon: "Lock" },
   // Frozen
   { id: "squads", label: "Squads", path: "/admin/squads", icon: "Users", frozen: true },
@@ -73,6 +83,7 @@ export const ADMIN_NAV: NavItem[] = [
   { id: "top", label: "Top", path: "/admin/top", icon: "Trophy", frozen: true },
   { id: "plenaria", label: "Plenária", path: "/admin/plenaria", icon: "MessageCircle", frozen: true },
 ];
+
 
 // Get visible nav items for a profile
 export function getVisibleNavItems(profile: NavProfile, compactMode = NAV_COMPACT_MODE): NavItem[] {

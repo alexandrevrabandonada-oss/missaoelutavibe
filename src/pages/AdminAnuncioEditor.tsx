@@ -142,7 +142,7 @@ export default function AdminAnuncioEditor() {
   }
 
   if (!isCoordinator()) {
-    navigate("/voluntario");
+    navigate("/voluntario/hoje");
     return null;
   }
 
